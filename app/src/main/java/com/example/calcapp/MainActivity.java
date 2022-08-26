@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         EditText number2ET = findViewById(R.id.num2);
         TextView numberSumTV = findViewById(R.id.answer);
         if (number1ET.getText().toString().equals("")){
-            numberSumTV.setText("ENTER NUM");
+            numberSumTV.setText("NO NUM");
         }
        else if (number2ET.getText().toString().equals("")){
-            numberSumTV.setText("ENTER NUM");
+            numberSumTV.setText("NO NUM");
         }
        else {
             double num1 = Integer.parseInt(number1ET.getText().toString());
@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         EditText number2ET = findViewById(R.id.num2);
         TextView numberSubTV = findViewById(R.id.answer);
         if (number1ET.getText().toString().equals("")){
-            numberSumTV.setText("ENTER NUM");
+            numberSubTV.setText("No NUM");
         }
         else if (number2ET.getText().toString().equals("")){
-            numberSumTV.setText("ENTER NUM");
+            numberSubTV.setText("NO NUM");
         }
         else {
             double num1 = Integer.parseInt(number1ET.getText().toString());
@@ -57,24 +57,36 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1);
         EditText number2ET = findViewById(R.id.num2);
         TextView numberMultTV = findViewById(R.id.answer);
-
+        if (number1ET.getText().toString().equals("")){
+            numberMultTV.setText("NO NUM");
+        }
+        else if (number2ET.getText().toString().equals("")){
+            numberMultTV.setText("NO NUM");
+        }
+        else {
         double num1 = Integer.parseInt(number1ET.getText().toString());
         double num2 = Integer.parseInt(number2ET.getText().toString());
         double mult = (num1 * num2);
 
-        numberMultTV.setText("" + mult);
-
+        numberMultTV.setText("" + mult);}
     }
     public void divide(View view) {
         EditText number1ET = findViewById(R.id.num1);
         EditText number2ET = findViewById(R.id.num2);
         TextView numberDivTV = findViewById(R.id.answer);
+        if (number1ET.getText().toString().equals("")){
+            numberDivTV.setText("NO NUM");
+        }
+        else if (number2ET.getText().toString().equals("")){
+            numberDivTV.setText("NO NUM");
+        }
+        else {
+            double num1 = Integer.parseInt(number1ET.getText().toString());
+            double num2 = Integer.parseInt(number2ET.getText().toString());
+            double div = (num1 / num2);
 
-        double num1 = Integer.parseInt(number1ET.getText().toString());
-        double num2 = Integer.parseInt(number2ET.getText().toString());
-        double div = (num1/num2);
-
-        numberDivTV.setText("" + div);
+            numberDivTV.setText("" + div);
+        }
 
     }
 
